@@ -46,7 +46,7 @@ async def handler(websocket, path):
 
 
 def main():
-    host = os.environ['HOST'] if 'HOST' in os.environ else '127.0.0.1'
+    host = os.environ['HOST'] if 'HOST' in os.environ else '0.0.0.0'
     port = int(os.environ['PORT'])
 
     event_loop = asyncio.get_event_loop()
