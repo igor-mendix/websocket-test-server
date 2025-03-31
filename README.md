@@ -14,6 +14,19 @@ As this is designed to be used in a test suite, it is not suitable for productio
 docker run --rm -p 5000:5000 -e PORT=5000 igormendix/websocket-test-server
 ```
 
+With disabled keepalives:
 ```sh
 docker run --rm -p 5000:5000 -e PORT=5000 -e DISABLE_KEEPALIVE=true igormendix/websocket-test-server
 ```
+
+### Client
+```sh
+python3 websocket-client.py wss://example.com
+```
+You may also set keepalive ping interval with `--ping-interval`
+
+Disable keepalives and enable more verbose output
+```sh
+python3 websocket-client.py --no-keepalive --debug wss://example.com
+```
+
