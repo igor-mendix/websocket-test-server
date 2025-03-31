@@ -11,5 +11,9 @@ As this is designed to be used in a test suite, it is not suitable for productio
 ## Usage
 
 ```sh
-docker run --rm -p 5000:5000 -e PORT=5000 andrewcarteruk/websocket-test-server
+docker run --rm -p 5000:5000 -e PORT=5000 igormendix/websocket-test-server
+```
+
+```sh
+docker run --rm -p 5000:5000 -e PORT=5000 -e DISABLE_KEEPALIVE=true igormendix/websocket-test-server
 ```
